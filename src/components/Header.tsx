@@ -4,32 +4,54 @@ import styled from 'styled-components'
 const Header = () => {
     return (
         <Container>
-            <div>
+            <a href="#">
                 <img src="/images/logo.svg" alt="logo" />
-            </div>
-            <div>
-                <ul>
-                    <li><a>Model S</a></li>
-                    <li><a>Model 3</a></li>
-                    <li><a>Model X</a></li>
-                    <li><a>Model Y</a></li>
-                    <li><a>Solar Roof</a></li>
-                    <li><a>Solar Panels</a></li>
-                </ul>
-            </div>
-            <div>
-                <ul>
-                    <li><a>Shop</a></li>
-                    <li><a>Account</a></li>
-                    <li><a>Menu</a></li>
-                </ul>
-            </div>
+            </a>
+            <Menu>
+                <a href="#">Model S</a>
+                <a href="#">Model 3</a>
+                <a href="#">Model X</a>
+                <a href="#">Model Y</a>
+                <a href="#">Solar Roof</a>
+                <a href="#">Solar Panels</a>
+            </Menu>
+            <RightMenu>
+                <a href="#">Shop</a>
+                <a href="#">Account</a>
+                <a href="#">Menu</a>
+            </RightMenu>
         </Container>
     );
 }
 
 const Container = styled.div`
-
+    min-height: 60px;
+    position:fixed;
+    display:flex;
+    align-items:center;
+    padding:0 20px;
+    top:0;
+    left:0;
+    right:0;
 `
+const Menu = styled.div`
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex:1;
 
+    a {
+        font-weight: 600;
+        text-transform:uppercase;
+        padding:0 10px;
+        flex-wrap: nowrap;
+    }
+`
+const RightMenu = styled.div`
+    a {
+        font-weight: 600;
+        text-transform:uppercase;
+        margin-right:10px;
+    }
+`
 export default Header;
