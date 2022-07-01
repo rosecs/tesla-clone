@@ -27,6 +27,7 @@ const Section = (props: Data): any => {
                         </RightButton>
                     }
                 </ButtonGroup>
+
                 <DownArrow src="/images/down-arrow.svg" />
             </Buttons>
         </Wrap>
@@ -84,4 +85,5 @@ const DownArrow = styled.img`
 const Buttons = styled.div` 
     
 `
+
 export default Section;
